@@ -1,5 +1,5 @@
+//time: O(n^2) - space: O(1)
 const bubbleSort = (arr) => {
-  //time: O(n^2) - space: O(1)
   for (let i = arr.length; i > 0; i--) {
     for (let j = 0; j < arr.length; j++) {
       if (arr[j] > arr[j + 1]) {
@@ -12,8 +12,8 @@ const bubbleSort = (arr) => {
   return arr;
 };
 
+//time: O(n^2) - space: O(1)
 const selectionSort = (arr) => {
-  //time: O(n^2) - space: O(1)
   for (let i = 0; i < arr.length; i++) {
     let min = i,
       aux;
@@ -29,8 +29,8 @@ const selectionSort = (arr) => {
   return arr;
 };
 
+//time: O(n^2) - space: O(1)
 const insertionSort = (arr) => {
-  //time: O(n^2) - space: O(1)
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] < arr[0]) {
       arr.unshift(arr.splice(i, 1)[0]);
@@ -44,8 +44,8 @@ const insertionSort = (arr) => {
   return arr;
 };
 
+//time: O(n log(n)) - space: O(n)
 const mergeSort = (arr) => {
-  //time: O(n log(n)) - space: O(n)
   if (arr.length === 1) {
     return arr;
   }
@@ -73,8 +73,8 @@ const merge = (left, right) => {
   return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
 };
 
+// time: O(n^2) - space: O(log(n))
 const quickSort = (arr, left = 0, right = arr.length - 1) => {
-  // time: O(n^2) - space: O(log(n))
   let pivot, partitionIndex;
 
   if (left < right) {
